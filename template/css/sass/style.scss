@@ -1,0 +1,74 @@
+@import 'base.scss';
+
+.container{
+    padding: 10px;
+    border-radius: 20px;
+    height: fit-content;
+    width: fit-content;
+    background-color: rgba(245, 244, 244, 0.991)
+};
+
+.login{
+    letter-spacing: 4px;
+    color: rgba(0, 209, 3, 0.991) !important;
+    font-weight: 700;
+    
+}
+
+.w-btn-lg{
+    width: 150px;
+}
+
+.btn-shadow{
+    box-shadow: 1px 2px 6px $shadowColor;
+}
+
+.auth-code-input{
+    display: inline-flex;
+    border-radius: 10px;
+    max-width: 30px;
+    border: 2px double rgba(76, 183, 255, 0.518);
+}
+
+.auth-code-input:focus{
+    border: 5px double rgba(76, 183, 255, 0.781);
+}
+
+.active{
+  
+   justify-content: center;
+}
+
+.code-active{
+    background-color: rgb(219, 219, 219); 
+    width:fit-content; 
+    height: 30px;
+    font-weight: 400;
+    letter-spacing: 4px;
+    color: rgb(70, 101, 255);
+   
+}
+
+.header-table{
+    z-index: 111;
+    padding: 10px;
+    box-shadow: 1px 1px 8px $shadowColor;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+    background-color: rgb(249, 242, 233);
+    border-bottom: 2px solid $shadowColor;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.conatinerdelete{
+    background-color: rgb(242, 247, 252);
+   box-shadow:  1px 1px 8px $shadowColor;
+   border-radius: 10px;
+   width : 500px;
+   padding: 10px;
+}
