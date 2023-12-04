@@ -1,6 +1,13 @@
 {
     "require": {
         "firebase/php-jwt": "^6.9",
-        "phpoffice/phpexcel": "^1.8"
+        "phpoffice/phpexcel": "^1.8",
+        "league/csv": "^9.8"
+    },
+    "autoload": {
+        "psr-4": {
+            "includes\\": "includes/"
+        }
     }
 }
+

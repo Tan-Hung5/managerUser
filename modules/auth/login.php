@@ -1,8 +1,9 @@
 <?php
 (!defined('_CODE'))? die('Truy cap khong hop le'):false;
 layouts('header', 'login');
+setSession('islogin',false);
 $condition = getFlashData('register');
-printToast($condition,'Register success');
+
 
 $data=['email'=>'', 'password'=>''];
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -14,7 +15,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if(empty($errors)) {
         $res = queryData($data['email']);
         if(password_verify($data['password'], $res['password'])) {
-
+            setSession('namelogin', $res['username']);
             setSession('islogin', true);
             $url= '/Project/manager_user/?module=&action=';
             header("Location:".$url."");

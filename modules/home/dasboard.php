@@ -8,7 +8,7 @@ layouts("header",'dasboard');
 
 $res = queryData();
 $login = getSession('islogin');
-$login = true;
+
 if(!isset($_GET['page'])){
     $page = 1;
 }else{
@@ -27,7 +27,7 @@ $data = array_slice($res, $start,$resPerPage);
 <div class="container-fluid mt-4">
     <div style="" class=" header-table">
         <div class="text-center">
-            <h1>Manager User</h1>
+            <h1>Manager Users</h1>
         </div>
         <div class="row justify-content-end">
             <?php if($login){
@@ -44,7 +44,7 @@ $data = array_slice($res, $start,$resPerPage);
                     <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#exampleModal">
                     Import csv
                     </button>
-                        <button class="btn btn-danger m-1">export</button>
+                        <a href="?module=export&action=export" class="btn btn-danger m-1">export</a>
                     </div>';
             }?>
         </div>
@@ -61,7 +61,7 @@ $data = array_slice($res, $start,$resPerPage);
         </tr>
     </thead>
     <tbody>
-           <?php printData($data,$page);?> 
+           <?php printData($data,$login);?> 
         
     </tbody>
     </table>
@@ -110,23 +110,28 @@ $data = array_slice($res, $start,$resPerPage);
         <h1 class="modal-title fs-5" id="exampleModalLabel">Import file</h1>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
-      <div class="modal-body">
-        <div class="mb-3">
-            <label for="formFile" class="form-label"></label>
-            <input class="form-control" type="file" id="formFile">
-        </div>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <form action="" method="post">
-            <button type="submit" class="btn btn-primary">Save changes</button>
+        <form action="?module=upload&action=upload" method="post" enctype="multipart/form-data">
+          <div class="modal-body">
+            <div class="mb-3">
+                <label for="formFile" class="form-label"></label>
+              
+                  <label for="file">Choose a file:</label>
+                  <input class="form-control" type="file" name="file" id="file">
+                  <br>   
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            
+              <input class="btn btn-primary" type="submit" name="submit" value="Upload">
         </form>   
       </div>
     </div>
   </div>
 </div>
+
+
+
 <?php
 layouts('footer','');
 ?>
-
-

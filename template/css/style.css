@@ -56,9 +56,17 @@
 
 body {
   height: 100vh;
-  display: flex;
+  display: inline-block;
   align-items: center;
   justify-content: center;
+ 
+}
+
+.footer{
+  background-color: rgb(233, 233, 233);
+  height: 30px;
+  width: 100%;
+  box-shadow: 1px 1px 8px rgb(161, 161, 161);
 }
 
 .conatinerdelete {
