@@ -16,7 +16,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $data = $standardization->standarData($data);
         $data = setTime($data,'create_at');
         insert('user',$data);
-        $url= '/Project/manager_user/?module=&action=';
+        $url= _WEB_HOST.'/?module=&action=';
         header("Location:".$url."");
     }
 }

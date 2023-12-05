@@ -9,14 +9,14 @@ $id = $_GET['id'];
  if($_SERVER["REQUEST_METHOD"] == "POST") {
   $page = getFlashData('page');
   if(isset($_POST["cancel"])){
-    $url= '/Project/manager_user/?module=&action=&page='.$page;
+    $url= _WEB_HOST.'/?module=&action=&page='.$page;
     header("Location:".$url."");
   }
 
   if(isset($_POST["delete"])){
     
     DeleteUser('user', 'ID = '.$id);
-    $url= '/Project/manager_user/?module=&action=&page='.$page;
+    $url= _WEB_HOST.'/?module=&action=&page='.$page;
     header("Location:".$url."");
   }
 }

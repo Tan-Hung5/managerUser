@@ -4,7 +4,7 @@ $islogin = getSession('islogin');
 $username = getSession('namelogin');
 
 ?>
-
+<script src="<?php echo _WEB_HOST_TEMPLE?>/js/script.js"></script>
 <nav class="navbar navbar-expand-lg bg-body-tertiary row">
 
     <div class="container-fluid col">

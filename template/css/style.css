@@ -1,9 +1,10 @@
 .container {
+  width: fit-content !important;
   padding: 10px;
   border-radius: 20px;
   height: fit-content;
   width: fit-content;
-  background-color: rgba(245, 244, 244, 0.991);
+  background-color: rgba(234, 233, 233, 0.991);
 }
 
 .login {

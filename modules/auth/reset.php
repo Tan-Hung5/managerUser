@@ -33,7 +33,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $data = encodePass($data);
         $data = setTime($data, 'update_at');
         update('user',$data, 'email = "'.$email.'"');
-        $url= '/Project/manager_user/?module=auth&action=login';
+        $url= _WEB_HOST.'/?module=auth&action=login';
         header("Location:".$url."");
     }
 }
@@ -43,7 +43,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <div class=" shadow d-flex justify-content-center align-items-center container ">
         <div class="row " style="width:380px; ">
             <div class=" col ">
-                <h2 class="text-center"><p class="fs-1 text-success-emphasis login">RESET PASSWORD</p></h2>
+                <h2 class="text-center"><p class="fs-1 --bs-success-text-emphasis login">RESET PASSWORD</p></h2>
                 <form action="" method="post">
                     <div class="form-group m-2">
                         <label for="auth-code">Enter Your Code</label>

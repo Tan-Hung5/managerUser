@@ -21,7 +21,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     	if(!empty($dataUpdate)){
     		$dataUpdate = setTime($dataUpdate,'update_at');
     		update('user', $dataUpdate, 'ID ='.$id);
-    		 $url= '/Project/manager_user/?module=&action=';
+    		 $url= _WEB_HOST.'/?module=&action=';
         	header("Location:".$url."");
     	}
 

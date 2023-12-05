@@ -33,7 +33,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <div class=" shadow d-flex justify-content-center align-items-center container ">
         <div class="row " style="width:380px;">
             <div class=" col ">
-                <h2 class="text-center"><p class="fs-1 text-success-emphasis login">LOGIN</p></h2>
+                <h2 class="text-center"><p class="fs-1 --bs-success-text-emphasis login">LOGIN</p></h2>
                 <form action="" method="post">
                     <div class="form-group m-2">
                         <label for="email">Email</label>

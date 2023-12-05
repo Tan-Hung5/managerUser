@@ -43,11 +43,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 }
 ?>
 
-<hr style="margin-bottom: 100px;">
+
+<hr style="margin-bottom: 50px;">
 <div class=" shadow d-flex justify-content-center align-items-center container ">
         <div class="row align-content-center" style="width:580px; height: 350px;">
             <div class=" col ">
-                <h2 class="text-center m-2"><p class="fs-1  text-success-emphasis login">ACTIVE YOUR ACCOUT</p></h2>
+                <h2 class="text-center m-2"><p class="fs-1  --bs-success-text-emphasis login">ACTIVE YOUR ACCOUT</p></h2>
                 <form action="" class="text-center" method="post">
                     <div class="form-group active text-center ">
                         <label for="auth-code">Enter Your Code</label>
@@ -73,5 +74,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         </div>
 </div>
 
+
 <script>
-const authCodeInputs = Array.from({ length: 6 }, (_, index) => new AuthCodeInput("digit" + (index + 1)));</script>
+const authCodeInputs = Array.from({ length: 6 }, (_, index) => new AuthCodeInput("digit" + (index + 1)));
+</script>
+<?php layouts('footer','');?>
