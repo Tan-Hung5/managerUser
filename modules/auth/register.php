@@ -22,8 +22,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         setFlashData('activecode', $code);
         $sendMail = new MyMailer();
         $sendMail-> sendActivecode($code,$data['email']);
-        $url= '/Project/manager_user/?module=auth&action=active';
-        header("Location:".$url."");
+        $url= _WEB_HOST.'/?module=auth&action=active';
+            echo '<script>
+                
+                    window.location.href = "'.$url.'";
+               
+            </script>';
     }
 }
 ?>

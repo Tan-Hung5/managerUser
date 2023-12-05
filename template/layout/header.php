@@ -2,6 +2,9 @@
 (!defined('_CODE')) ? die('Truy cap khong hop le') : false;
 $islogin = getSession('islogin');
 $username = getSession('namelogin');
+if($_SERVER["REQUEST_METHOD"]=="GET"){
+    setSession('islogin', false);
+}
 
 ?>
 <script src="<?php echo _WEB_HOST_TEMPLE?>/js/script.js"></script>
@@ -25,9 +28,9 @@ $username = getSession('namelogin');
                     '.$username.'
                 </a>
                 <ul class="dropdown-menu">
-                    
-                    <li><a class="dropdown-item" href="?module=auth&action=login">Logout</a></li>
-                    
+                    <form method="post" >
+                    <li><a type="submit" name="logoutbtn" class="dropdown-item" href="?module=auth&action=login">Logout</a></li>
+                    </form>
                    
                 </ul>
                 </li>' : '';

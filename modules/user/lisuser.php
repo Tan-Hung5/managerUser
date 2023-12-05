@@ -29,6 +29,7 @@ function printData($data=[],$islogin){
             <td>'.$value['username'].'</td>
             <td>'.$value['phone'].'</td>
             <td>',$value['email'],'</td> 
+            <td>',$value['role'],'</td> 
             <td></td>
                            
         </tr>';

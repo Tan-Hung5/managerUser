@@ -17,7 +17,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $data = setTime($data,'create_at');
         insert('user',$data);
         $url= _WEB_HOST.'/?module=&action=';
-        header("Location:".$url."");
+            echo '<script>
+                
+                    window.location.href = "'.$url.'";
+               
+            </script>';
     }
 }
 ?>

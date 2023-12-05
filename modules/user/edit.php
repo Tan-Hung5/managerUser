@@ -21,8 +21,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     	if(!empty($dataUpdate)){
     		$dataUpdate = setTime($dataUpdate,'update_at');
     		update('user', $dataUpdate, 'ID ='.$id);
-    		 $url= _WEB_HOST.'/?module=&action=';
-        	header("Location:".$url."");
+            $url= _WEB_HOST.'/?module=&action=';
+            echo '<script>
+                
+                    window.location.href = "'.$url.'";
+               
+            </script>';
     	}
 
     }

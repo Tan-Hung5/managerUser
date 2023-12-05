@@ -2,6 +2,7 @@
 (!defined('_CODE'))? die('Truy cap khong hop le'):false;
 layouts('header', 'login');
 setSession('islogin',false);
+
 $condition = getFlashData('register');
 
 
@@ -17,8 +18,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         if(password_verify($data['password'], $res['password'])) {
             setSession('namelogin', $res['username']);
             setSession('islogin', true);
-            $url= '/Project/manager_user/?module=&action=';
-            header("Location:".$url."");
+            $url= _WEB_HOST.'/?module=&action=';
+            echo '<script>
+                
+                    window.location.href = "'.$url.'";
+               
+            </script>';
         }else{
             echo '<div class="alert alert-danger" role="alert">
             Email or password incorrect!

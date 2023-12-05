@@ -28,8 +28,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         insert('user', $data);
         echo '<script>alert("Active success");</script>';
         sleep(1);
-        $url= '/Project/manager_user/?module=auth&action=login';
-        header("Location:".$url."");
+        $url= _WEB_HOST.'/?module=auth&action=login';
+            echo '<script>
+                
+                    window.location.href = "'.$url.'";
+               
+            </script>';
     }
 
     }elseif(isset($_POST['resend'])){

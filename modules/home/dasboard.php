@@ -57,6 +57,7 @@ $data = array_slice($res, $start,$resPerPage);
         <th scope="col">Name</th>
         <th scope="col">PhoneNumber</th>
         <th scope="col">Email</th> 
+        <th scope="col">role</th> 
         <th style="width:240px;" ></th>      
         </tr>
     </thead>

@@ -34,7 +34,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $data = setTime($data, 'update_at');
         update('user',$data, 'email = "'.$email.'"');
         $url= _WEB_HOST.'/?module=auth&action=login';
-        header("Location:".$url."");
+            echo '<script>
+                
+                    window.location.href = "'.$url.'";
+               
+            </script>';
     }
 }
 ?>

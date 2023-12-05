@@ -9,15 +9,24 @@ $id = $_GET['id'];
  if($_SERVER["REQUEST_METHOD"] == "POST") {
   $page = getFlashData('page');
   if(isset($_POST["cancel"])){
+    
     $url= _WEB_HOST.'/?module=&action=&page='.$page;
-    header("Location:".$url."");
+            echo '<script>
+                
+                    window.location.href = "'.$url.'";
+               
+            </script>';
   }
 
   if(isset($_POST["delete"])){
     
     DeleteUser('user', 'ID = '.$id);
     $url= _WEB_HOST.'/?module=&action=&page='.$page;
-    header("Location:".$url."");
+            echo '<script>
+                
+                    window.location.href = "'.$url.'";
+               
+            </script>';
   }
 }
 ?>

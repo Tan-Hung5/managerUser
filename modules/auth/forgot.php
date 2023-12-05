@@ -14,8 +14,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         setSession('activecode', $code);
         $sendMail = new MyMailer();
         $sendMail-> sendActivecode($code,$email);
-        $url= '/Project/manager_user/?module=auth&action=reset';
-        header("Location:".$url."");
+        $url= _WEB_HOST.'/?module=auth&action=reset';
+            echo '<script>
+                
+                    window.location.href = "'.$url.'";
+               
+            </script>';
     }
 }
     
