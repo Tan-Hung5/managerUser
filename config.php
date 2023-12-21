@@ -9,7 +9,7 @@ define('_WEB_HOST_TEMPLE',_WEB_HOST.'/template');
 define('_WEB_PATH',__DIR__);
 define('_WEB_PATH_TEMPLATE',_WEB_PATH.'/template');
 
-const _HOST = 'localhost';
-const _DB = 'id21617981_usermanager';
-const _USER = 'id21617981_usermanager_by_hung';
-const _PASSWORD = 'devbyHung123$';
+const _HOST = '%';
+const _DB = 'dbuser';
+const _USER = 'hung';
+const _PASSWORD = 'dn2V3NSU13zOFq8';
