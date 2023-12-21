@@ -9,7 +9,7 @@ define('_WEB_HOST_TEMPLE',_WEB_HOST.'/template');
 define('_WEB_PATH',__DIR__);
 define('_WEB_PATH_TEMPLATE',_WEB_PATH.'/template');
 
-const _HOST = 'webnfruit';
+const _HOST = '127.0.0.1';
 const _DB = 'dbuser';
 const _USER = 'hung';
 const _PASSWORD = 'dn2V3NSU13zOFq8';
